@@ -1,0 +1,210 @@
+/* Đặt màu nền cho toàn bộ trang Admin */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow: hidden; /* Đảm bảo không bị tràn khi bo góc */
+  }
+  
+  /* Phần menu bên trái */
+  .admin-sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .admin-sidebar ul li {
+    margin-bottom: 15px;
+  }
+  
+  .admin-sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-sidebar ul li a:hover {
+    background-color: #444;
+  }
+  
+  /* Phần nội dung bài viết bên phải */
+  .admin-content {
+    flex: 1;
+    padding: 20px;
+    border-top-right-radius: 10px; /* Bo tròn góc trên bên phải */
+    border-bottom-right-radius: 10px; /* Bo tròn góc dưới bên phải */
+    background-color: white; /* Thêm nền trắng để tách biệt với background ngoài */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho phần nội dung */
+  }
+  
+  /* Tiêu đề của phần nội dung */
+  .admin-content h1 {
+    color: #333;
+  }
+  
+  /* Bảng hiển thị thông tin bài viết */
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px; /* Bo tròn góc của bảng */
+    overflow: hidden; /* Đảm bảo không bị tràn khi bo góc */
+  }
+  
+  .admin-table th, .admin-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .admin-table th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .admin-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Các nút thêm, sửa, xóa */
+  .action-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #4CAF50; /* Màu xanh cho nút thêm */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  button.edit {
+    background-color: #FFA500; 
+    border-radius: 20%;/* Màu cam cho nút sửa */
+  }
+  
+  button.add {
+    background-color: #4CAF50;
+    border-radius: 55%;
+    width: 50px;/* Màu xanh cho nút thêm */
+  }
+  
+  button.delete {
+    background-color: #f44336;
+    border-radius: 20%; /* Màu đỏ cho nút xóa */
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Header */
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .logout {
+    margin-left: 10px;
+  }
+
+  .cover-img {
+    width: 100px; /* Bạn có thể thay đổi kích thước cho phù hợp */
+    height: 50px;
+    object-fit: cover; /* Giữ tỷ lệ ảnh mà không làm méo ảnh */
+  }
+
+  /* Để làm mờ nền khi modal xuất hiện */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Mờ nền */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Đảm bảo modal nằm trên tất cả các phần tử khác */
+}
+
+/* Giao diện modal */
+.modal-content {
+  /* background-color: white; */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-height: 80vh;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Các hành động trong modal */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #808080;
+  color: white;
+}
+
+.edit-form{
+  width: 360px;
+}
+.edit-info{
+  display: contents;
+  /* justify-content: ; */
+}
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+
+
+  

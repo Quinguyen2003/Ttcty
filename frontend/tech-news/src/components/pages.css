@@ -1,0 +1,100 @@
+.description-box {
+    background-color: #808080;
+    padding: 20px;
+    margin-bottom: 30px;
+    /* border-radius: 8px; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -5px;
+    text-align: center;
+  }
+  
+  .description-box h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .description-box p {
+    font-size: .8rem;
+    color: #fff;
+    line-height: 1.5;
+  }
+  
+.pages {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+  }
+  
+  .pages .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .pages .news-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* justify-content: space-between; */
+  }
+  
+  .pages .post {
+    background-color: #fff;
+    /* border-radius: 8px; */
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 20px); 
+  }
+  
+
+  
+  .pages .post-image{
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .pages .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .pages .post-text {
+    padding: 15px;
+  }
+  
+  .pages .tags{
+    display: inline-block;
+    background-color: #808080;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    /* border-radius: 20px; */
+    margin-bottom: 10px;
+  }
+  
+  .pages .post-text h2  {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  
+  .pages .post-text p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .pages .author {
+    display: flex;
+    /* justify-content: space-between; */
+    font-size: 0.85rem;
+    color: #777;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    margin-top: 15px;
+  }
+  
