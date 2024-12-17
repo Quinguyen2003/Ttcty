@@ -5,14 +5,13 @@ import Swal from "sweetalert2";
 
 import "./adminpage.css";
 
-const AdminPage = () => {
+const TechNewsPage = () => {
   const [posts, setPosts] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddMode, setIsAddMode] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
   const navigate = useNavigate();
 
-  // Hàm fetchNewsData
   const fetchNewsData = async () => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -21,9 +20,12 @@ const AdminPage = () => {
     }
 
     try {
-      const response = await axios.get("http://localhost:5000/api/news", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await axios.get(
+        "http://localhost:5000/api/news/category/1",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       setPosts(response.data);
     } catch (error) {
       Swal.fire({
@@ -89,7 +91,6 @@ const AdminPage = () => {
 
     try {
       if (isAddMode) {
-        // Thêm bài viết mới
         await axios.post("http://localhost:5000/api/add_post", data, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -101,7 +102,6 @@ const AdminPage = () => {
           timer: 1000,
         });
       } else {
-        // Cập nhật bài viết
         await axios.put(
           `http://localhost:5000/api/news/${selectedPost.id}`,
           data,
@@ -159,7 +159,7 @@ const AdminPage = () => {
         showConfirmButton: false,
         timer: 1000,
       });
-      fetchNewsData(); // Cập nhật lại danh sách bài viết sau khi xóa
+      fetchNewsData();
     } catch (error) {
       Swal.fire({
         position: "top-right",
@@ -175,9 +175,8 @@ const AdminPage = () => {
 
   return (
     <div className="admin-container">
-      {/* Sidebar */}
       <div className="admin-sidebar">
-        <h2>Admin Menu</h2>
+        <h2>Admin Page</h2>
         <ul>
           <li>
             <a href="/adminpage">All Post</a>
@@ -206,16 +205,14 @@ const AdminPage = () => {
         </ul>
       </div>
 
-      {/* Content */}
       <div className="admin-content">
         <div className="admin-header">
-          <h1>Admin Page</h1>
+          <h1>Tech News Page</h1>
           <button className="add" onClick={openAddModal}>
             <i className="fa-solid fa-plus"></i>
           </button>
         </div>
 
-        {/* Table of Posts */}
         <table className="admin-table">
           <thead>
             <tr>
@@ -269,11 +266,9 @@ const AdminPage = () => {
         </table>
       </div>
 
-      {/* Modal for Editing / Adding */}
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
-            {/* <h2>{isAddMode ? "Add New Post" : "Edit Post"}</h2> */}
             <form className="edit-form" onSubmit={handleSave}>
               <h2>{isAddMode ? "Add New Post" : "Edit Post"}</h2>
               <div className="edit-info">
@@ -346,4 +341,4 @@ const AdminPage = () => {
   );
 };
 
-export default AdminPage;
+export default TechNewsPage;

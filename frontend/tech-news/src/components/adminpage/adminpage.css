@@ -1,12 +1,11 @@
-/* Đặt màu nền cho toàn bộ trang Admin */
 .admin-container {
     display: flex;
     min-height: 100vh;
     background-color: #fff;
-    overflow: hidden; /* Đảm bảo không bị tràn khi bo góc */
+    overflow: hidden; 
   }
   
-  /* Phần menu bên trái */
+  
   .admin-sidebar {
     width: 250px;
     background-color: #333;
@@ -43,28 +42,28 @@
     background-color: #444;
   }
   
-  /* Phần nội dung bài viết bên phải */
+
   .admin-content {
     flex: 1;
     padding: 20px;
-    border-top-right-radius: 10px; /* Bo tròn góc trên bên phải */
-    border-bottom-right-radius: 10px; /* Bo tròn góc dưới bên phải */
-    background-color: white; /* Thêm nền trắng để tách biệt với background ngoài */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho phần nội dung */
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    background-color: white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Tiêu đề của phần nội dung */
+  
   .admin-content h1 {
     color: #333;
   }
   
-  /* Bảng hiển thị thông tin bài viết */
+  
   .admin-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border-radius: 10px; /* Bo tròn góc của bảng */
-    overflow: hidden; /* Đảm bảo không bị tràn khi bo góc */
+    border-radius: 10px; 
+    overflow: hidden; 
   }
   
   .admin-table th, .admin-table td {
@@ -82,7 +81,6 @@
     background-color: #f1f1f1;
   }
   
-  /* Các nút thêm, sửa, xóa */
   .action-buttons {
     display: flex;
     justify-content: space-around;
@@ -91,7 +89,7 @@
   
   button {
     padding: 5px 10px;
-    background-color: #4CAF50; /* Màu xanh cho nút thêm */
+    background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
@@ -101,25 +99,25 @@
   
   button.edit {
     background-color: #FFA500; 
-    border-radius: 20%;/* Màu cam cho nút sửa */
+    border-radius: 20%;
   }
   
   button.add {
     background-color: #4CAF50;
     border-radius: 55%;
-    width: 50px;/* Màu xanh cho nút thêm */
+    width: 50px;
   }
   
   button.delete {
     background-color: #f44336;
-    border-radius: 20%; /* Màu đỏ cho nút xóa */
+    border-radius: 20%; 
   }
   
   button:hover {
     opacity: 0.8;
   }
   
-  /* Header */
+  
   .admin-header {
     display: flex;
     justify-content: space-between;
@@ -131,26 +129,25 @@
   }
 
   .cover-img {
-    width: 100px; /* Bạn có thể thay đổi kích thước cho phù hợp */
+    width: 100px; 
     height: 50px;
-    object-fit: cover; /* Giữ tỷ lệ ảnh mà không làm méo ảnh */
+    object-fit: cover; 
   }
 
-  /* Để làm mờ nền khi modal xuất hiện */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Mờ nền */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999; /* Đảm bảo modal nằm trên tất cả các phần tử khác */
+  z-index: 999; 
 }
 
-/* Giao diện modal */
+
 .modal-content {
   /* background-color: white; */
   padding: 20px;
@@ -160,7 +157,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Các hành động trong modal */
+
 .modal-actions {
   display: flex;
   justify-content: space-between;

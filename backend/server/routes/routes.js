@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const connection = require("../connectMysql");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 router.get("/news", (req, res) => {
   const { category_id } = req.query;
@@ -55,8 +55,6 @@ router.get("/news/tags/:id", (req, res) => {
   });
 });
 
-
-
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -68,8 +66,8 @@ router.post("/login", async (req, res) => {
       bcrypt.compare(password, user.password, function (err, result) {
         if (result === true) {
           return res.status(200).send("Login successful");
-          } else {
-            return res.status(401).send("Password or email incorrect");
+        } else {
+          return res.status(401).send("Password or email incorrect");
         }
       });
     } else {
@@ -95,7 +93,15 @@ router.post("/add_post", (req, res) => {
 router.put("/news/:id", (req, res) => {
   const { id } = req.params;
   const { title, cover, date, author, desc, category_id, tags_id } = req.body;
-  if (!title || !cover || !date || !author || !desc || !category_id || !tags_id) {
+  if (
+    !title ||
+    !cover ||
+    !date ||
+    !author ||
+    !desc ||
+    !category_id ||
+    !tags_id
+  ) {
     return res.status(400).send("All fields are required");
   }
   const query =
@@ -109,7 +115,6 @@ router.put("/news/:id", (req, res) => {
     }
   );
 });
-
 
 router.delete("/news/:id", (req, res) => {
   const { id } = req.params;

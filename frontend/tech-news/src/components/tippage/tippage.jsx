@@ -40,7 +40,7 @@ const Tipspages = () => {
           <div className="description-box">
             <h1>TIPS & TRICKS</h1>
             <p>
-            The place to gather the latest information about cars and motorcycles both domestically and internationally.
+            Unlock useful hacks, guides, and insights to make your life easier. From tech solutions to everyday tips, we've got you covered with practical advice and smart tricks.
             </p>
           </div>
           <div className="news-content">

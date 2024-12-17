@@ -40,7 +40,7 @@ const Musicpages = () => {
           <div className="description-box">
             <h1>MUSIC NEWS</h1>
             <p>
-            The place to gather the latest information about cars and motorcycles both domestically and internationally.
+            Discover the latest updates on concerts, new releases, and trending artists. Stay tuned for all the buzz in the world of music, from global hits to rising stars.
             </p>
           </div>
           <div className="news-content">

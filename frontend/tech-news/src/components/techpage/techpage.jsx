@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import Heading from "../common/header/Head"; // Giả sử bạn đã có Heading component
+
 import "../pages.css";
 
 const Techpages = () => {

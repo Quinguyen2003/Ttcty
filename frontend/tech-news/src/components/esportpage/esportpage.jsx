@@ -40,7 +40,7 @@ const Esportpages = () => {
           <div className="description-box">
             <h1>ESPORTS</h1>
             <p>
-            The place to gather the latest information about cars and motorcycles both domestically and internationally.
+            Stay updated with the latest esports tournaments, match results, and highlights from the world of competitive gaming. Your source for everything about esports events and teams!
             </p>
           </div>
           <div className="news-content">
