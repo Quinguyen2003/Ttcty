@@ -1,0 +1,75 @@
+/* Đặt màu nền cho toàn bộ trang */
+body {
+    background-color: #fff; /* Tông xám nhạt */
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+  }
+  
+  /* Lớp phủ đen mờ đằng sau form */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Mờ đen */
+  }
+  
+  /* Form đăng nhập */
+  form {
+    background-color: white; /* Nền trắng */
+    padding: 20px;
+    border-radius: 20px; /* Không có bo tròn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Mỗi viền bóng mờ */
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Tiêu đề của form */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Thông báo lỗi */
+  /* p {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+  } */
+  
+  /* Các trường nhập */
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Không có bo tròn */
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  /* Nút đăng nhập */
+  button {
+    padding: 10px;
+    background-color: #333; /* Nút màu xám đen */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px; /* Không có bo tròn */
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #555; /* Màu xám sáng khi hover */
+  }
+  

@@ -1,0 +1,32 @@
+.quickview .box {
+    margin-bottom: 20px;
+  }
+  .quickview .img {
+    width: 100px;
+    height: 80px;
+  }
+  .quickview img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+  }
+  .quickview .text {
+    padding: 0 15px;
+  }
+  .quickview h1 {
+    font-size: 15px;
+  }
+  .quickview span {
+    font-size: 12px;
+    color: grey;
+  }
+  @media screen and (max-width: 768px) {
+    .quickview .img,
+    .quickview img {
+      width: 200px;
+      height: 150px;
+    }
+    .quickview .text {
+      width: 100%;
+    }
+  }

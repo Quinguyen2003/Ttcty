@@ -1,0 +1,32 @@
+.esports .box {
+    margin-bottom: 20px;
+  }
+  .esports .img {
+    width: 100px;
+    height: 80px;
+  }
+  .esports img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+  }
+  .esports .text {
+    padding: 0 15px;
+  }
+  .esports h1 {
+    font-size: 15px;
+  }
+  .esports span {
+    font-size: 12px;
+    color: grey;
+  }
+  @media screen and (max-width: 768px) {
+    .esports .img,
+    .esports img {
+      width: 200px;
+      height: 150px;
+    }
+    .esports .text {
+      width: 100%;
+    }
+  }
