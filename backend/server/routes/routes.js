@@ -81,7 +81,7 @@ router.post("/login", async (req, res) => {
 router.post("/add_post", (req, res) => {
   const { title, cover, date, author, desc, category_id, tags_id } = req.body;
   const query =
-    "INSERT INTO news (title, cover, date, author, desc, category_id, tags_id) VALUES (?,?,?,?,?,?,?)";
+    "INSERT INTO news (title, cover, date, author, `desc`, category_id, tags_id) VALUES (?,?,?,?,?,?,?)";
   connection.query(
     query,
     [title, cover, date, author, desc, category_id, tags_id],
@@ -99,7 +99,7 @@ router.put("/news/:id", (req, res) => {
     return res.status(400).send("All fields are required");
   }
   const query =
-    "UPDATE news SET title = ?, cover = ?, date = ?, author = ?, desc = ?, category_id = ?, tags_id = ? WHERE device_id = ?";
+    "UPDATE news SET title = ?, cover = ?, date = ?, author = ?, `desc` = ?, category_id = ?, tags_id = ? WHERE id = ?";
   connection.query(
     query,
     [title, cover, date, author, desc, category_id, tags_id, id],
@@ -119,4 +119,13 @@ router.delete("/news/:id", (req, res) => {
     return res.status(200).send("Post deleted successfully");
   });
 });
+
+router.get("/category", (req, res) => {
+  const query = "SELECT * FROM category";
+  connection.query(query, (err, result) => {
+    if (err) return res.status(500).send(err);
+    return res.status(200).send(result);
+  });
+});
+
 module.exports = router;

@@ -29,10 +29,6 @@ exports.up = function (db, callback) {
         foreignKey: {
           name: 'news_category_id_fk',
           table: "category",
-          rules: {
-            onDelete: "cascade",
-            onUpdate: "restrict"
-          },
            mapping: 'id'
         }
       },
@@ -42,10 +38,6 @@ exports.up = function (db, callback) {
         foreignKey: {
           name: 'news_tags_id_fk',
           table: "tags",
-          rules: {
-            onDelete: "cascade",
-            onUpdate: "restrict"
-          },
            mapping: 'id'
         }
       }

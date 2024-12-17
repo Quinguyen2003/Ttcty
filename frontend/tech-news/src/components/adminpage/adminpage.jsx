@@ -205,6 +205,7 @@ const AdminPage = () => {
             <tr>
               <th>Title</th>
               <th>Cover Image</th>
+              <th>Author</th>
               <th>Category</th>
               <th>Tags</th>
               <th>Date</th>
@@ -220,8 +221,9 @@ const AdminPage = () => {
                   <td>
                     <img src={post.cover} alt="Cover" className="cover-img" />
                   </td>
+                  <td>{post.author}</td>
                   <td>{post.category_id}</td>
-                  <td>{post.tags_name}</td>
+                  <td>{post.tags_id}</td>
                   <td>{post.date}</td>
                   <td>{post.desc}</td>
                   <td>
@@ -274,7 +276,7 @@ const AdminPage = () => {
               </div>
               <div className="edit-info">
                 <label>Author</label>
-                <input type="text" name="title" defaultValue={selectedPost?.author || ""} />
+                <input type="text" name="author" defaultValue={selectedPost?.author || ""} />
               </div>
               <div className="edit-info">
                 <label>Date</label>
